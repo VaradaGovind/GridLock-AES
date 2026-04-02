@@ -1,9 +1,10 @@
-#-----------------------------------
-# GridLock AES: Vivado + SystemVerilog (Safe Version)
-# Keeps RTL, Testbench, Constraints, and Project files
-#-----------------------------------
+# ------------------------------------------------------------
+# GridLock AES: Source-First .gitignore
+# Optimized for Xilinx Vivado SystemVerilog Projects
+# ------------------------------------------------------------
 
-# Ignore Vivado-generated folders
+# --- SECTION 1: Ignore Massive Vivado Junk ---
+# These folders contain gigabytes of temporary bitstreams and logs
 .Xil/
 *.cache/
 *.hw/
@@ -11,56 +12,41 @@
 *.runs/
 *.sim/
 *.data/
-*.xsa/
-*.dcp/
-*.ip/
-*.xci/
-*.backup.log
-*.backup.jou
-
-# Simulation and Synthesis outputs
-*.vcd
-*.wlf
-*.log
-*.jou
-*.pb
-*.rpt
-*.saif
-*.wdb
 xsim.dir/
 
-# Temporary/editor files
-*~
-*.swp
-*.tmp
-*.bak
+# --- SECTION 2: Ignore Individual Temporary Files ---
+*.jou
+*.log
+*.pb
+*.str
+*.os
+*.o
+*.obj
+vivado_*.backup.*
+*.tclbackup
+
+# --- SECTION 3: System & IDE Bloat ---
 .DS_Store
-.DS_Store?
 .vscode/
 .idea/
+Thumbs.db
 
-#-----------------------------------
-# KEEP explicitly (Whitelist)
-#-----------------------------------
+# --- SECTION 4: THE SAFETY NET (The Whitelist) ---
+# This ensures Git NEVER ignores your actual code, even if it's 
+# inside one of the folders ignored above.
 
-# Hardware Source & Testbench files
 !*.v
-!*.vh
 !*.sv
+!*.vh
 !*.svh
-
-# Vivado Constraints (Clock & Pin mapping)
 !*.xdc
-
-# Vivado Project File (Required to open the project)
 !*.xpr
-
-# Keep images and documentation
-!*.png
-!*.jpg
-!*.jpeg
+!*.tcl
 !*.md
-
-# Keep repository structure files
+!LICENSE
 !.gitignore
-!README.md
+
+# Also specifically allow the source directory if it exists
+!**/srcs/
+!**/rtl/
+!**/tb/
