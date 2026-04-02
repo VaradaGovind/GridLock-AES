@@ -1,10 +1,8 @@
 # ------------------------------------------------------------
-# GridLock AES: Source-First .gitignore
-# Optimized for Xilinx Vivado SystemVerilog Projects
+# GridLock AES: Default Vivado Structure .gitignore
 # ------------------------------------------------------------
 
-# --- SECTION 1: Ignore Massive Vivado Junk ---
-# These folders contain gigabytes of temporary bitstreams and logs
+# Ignore massive Vivado junk
 .Xil/
 *.cache/
 *.hw/
@@ -14,39 +12,27 @@
 *.data/
 xsim.dir/
 
-# --- SECTION 2: Ignore Individual Temporary Files ---
+# Ignore logs and journals
 *.jou
 *.log
 *.pb
-*.str
-*.os
-*.o
-*.obj
 vivado_*.backup.*
-*.tclbackup
 
-# --- SECTION 3: System & IDE Bloat ---
-.DS_Store
-.vscode/
-.idea/
-Thumbs.db
+# --- THE WHITELIST (The Fix) ---
+# Allow the project file
+!*.xpr
 
-# --- SECTION 4: THE SAFETY NET (The Whitelist) ---
-# This ensures Git NEVER ignores your actual code, even if it's 
-# inside one of the folders ignored above.
+# Allow the deep Vivado source and sim folders
+!**/GridLock_AES.srcs/
+!**/GridLock_AES.srcs/**
 
+# Ensure specific hardware file types are never ignored
 !*.v
 !*.sv
 !*.vh
 !*.svh
 !*.xdc
-!*.xpr
 !*.tcl
 !*.md
 !LICENSE
 !.gitignore
-
-# Also specifically allow the source directory if it exists
-!**/srcs/
-!**/rtl/
-!**/tb/
