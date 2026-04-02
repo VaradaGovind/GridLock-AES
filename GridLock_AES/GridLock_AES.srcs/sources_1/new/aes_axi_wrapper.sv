@@ -10,14 +10,16 @@ module aes_axi_wrapper #(
     axi4_stream_if.master m_axis
 );
 
+    import aes_types_pkg::*;
+
     logic [127:0] key_reg;
     logic         key_init_start_reg;
     logic         key_ready_status;
     logic         start_encryption;
     logic         core_busy;
     logic         core_data_valid;
-    aes_types_pkg::state_t plaintext_state;
-    aes_types_pkg::state_t ciphertext_state;
+    state_t       plaintext_state;
+    state_t       ciphertext_state;
 
     logic [C_S_AXI_ADDR_WIDTH-1:0] axi_awaddr;
     logic                          axi_awready;
