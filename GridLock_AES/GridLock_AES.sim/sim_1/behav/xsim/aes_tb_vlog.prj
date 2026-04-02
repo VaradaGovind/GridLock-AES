@@ -1,0 +1,16 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  --include "../../../../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef" \
+"../../../../../../../Coding/AES/aes_types_pkg.sv" \
+"../../../../../../../Coding/AES/aes_axi_wrapper.sv" \
+"../../../../../../../Coding/AES/aes_core.sv" \
+"../../../../../../../Coding/AES/aes_key_expand.sv" \
+"../../../../../../../Coding/AES/aes_sbox.sv" \
+"../../../../../../../Coding/AES/axi4_lite_if.sv" \
+"../../../../../../../Coding/AES/axi4_stream_if.sv" \
+"../../../../../../../Coding/AES/aes_tb.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

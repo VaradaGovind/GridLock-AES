@@ -1,0 +1,27 @@
+Time resolution is 1 ps
+TB: Simulation Started.
+TB: Reset released.
+TB: Configuring key...
+TB: AXI-Lite Write to 0x00 -> 0x09cf4f3c
+TB: AXI-Lite Write to 0x04 -> 0xabf71588
+TB: AXI-Lite Write to 0x08 -> 0x28aed2a6
+TB: AXI-Lite Write to 0x0c -> 0x2b7e1516
+TB: Triggering key expansion...
+TB: AXI-Lite Write to 0x14 -> 0x00000001
+TB: AXI-Lite Read from 0x18 -> 0x00000002
+TB: Key is ready.
+TB: Sending plaintext...
+TB: Plaintext sent.
+TB: Waiting for ciphertext...
+TB: Ciphertext received.
+Error: ----------------------------------------
+Time: 655 ns  Iteration: 1  Process: /aes_tb/Initial64_21  Scope: aes_tb  File: C:/Users/varad/OneDrive/Documents/Coding/AES/aes_tb.sv Line: 114
+Error: ---> TEST FAILED! <---
+Time: 655 ns  Iteration: 1  Process: /aes_tb/Initial64_21  Scope: aes_tb  File: C:/Users/varad/OneDrive/Documents/Coding/AES/aes_tb.sv Line: 115
+Error: Received: b1338bb1bd889cb7bcfedf088ccf48db
+Time: 655 ns  Iteration: 1  Process: /aes_tb/Initial64_21  Scope: aes_tb  File: C:/Users/varad/OneDrive/Documents/Coding/AES/aes_tb.sv Line: 116
+Error: Expected: 3925841d02dc09fbdc118597196a0b32
+Time: 655 ns  Iteration: 1  Process: /aes_tb/Initial64_21  Scope: aes_tb  File: C:/Users/varad/OneDrive/Documents/Coding/AES/aes_tb.sv Line: 117
+Error: ----------------------------------------
+Time: 655 ns  Iteration: 1  Process: /aes_tb/Initial64_21  Scope: aes_tb  File: C:/Users/varad/OneDrive/Documents/Coding/AES/aes_tb.sv Line: 118
+$finish called at time : 705 ns : File "C:/Users/varad/OneDrive/Documents/Coding/AES/aes_tb.sv" Line 122

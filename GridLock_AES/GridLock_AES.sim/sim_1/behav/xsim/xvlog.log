@@ -1,0 +1,14 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/varad/OneDrive/Documents/Coding/AES/aes_types_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/varad/OneDrive/Documents/Coding/AES/aes_axi_wrapper.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aes_axi_wrapper
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/varad/OneDrive/Documents/Coding/AES/aes_core.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aes_core
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/varad/OneDrive/Documents/Coding/AES/aes_key_expand.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aes_key_expand
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/varad/OneDrive/Documents/Coding/AES/aes_sbox.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aes_sbox
+INFO: [VRFC 10-311] analyzing module gf_inv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/varad/OneDrive/Documents/Coding/AES/axi4_lite_if.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/varad/OneDrive/Documents/Coding/AES/axi4_stream_if.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/varad/OneDrive/Documents/Coding/AES/aes_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aes_tb
