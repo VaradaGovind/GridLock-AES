@@ -1,0 +1,61 @@
+#-----------------------------------
+# Verilog + Vivado (Safe Version)
+# Keeps Verilog source/testbench files
+#-----------------------------------
+
+# Ignore Vivado-generated folders
+*.cache/
+*.hw/
+*.ip_user_files/
+*.runs/
+*.data/
+*.xsa/
+*.dcp/
+*.ip/
+*.xci/
+*.backup.log
+*.backup.jou
+
+# Simulation outputs
+*.vcd
+*.wlf
+*.log
+*.jou
+transcript
+*.pb
+*.rpt
+*.tcl.history
+*.tclbackup
+work/
+obj_dir/
+
+# Temporary/editor files
+*~
+*.swp
+*.tmp
+*.bak
+*.DS_Store
+
+# -----------------------------
+# KEEP source and testbench files
+# -----------------------------
+!*.v
+!*.vh
+!*.sv
+!*.svh
+
+# Keep images and documentation
+!*.png
+!*.jpg
+!*.jpeg
+!*.md
+
+# Keep project structure
+!.gitignore
+!README.md
+
+# Keep .srcs and .sim folders but ignore their internal Vivado junk
+!*/.srcs/
+!*/.sim/
+!*/.srcs/**/
+!*/.sim/**/

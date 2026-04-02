@@ -1,2 +1,7 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+*.v  linguist-language=Verilog
+*.vh linguist-language=Verilog
+*.sv linguist-language=SystemVerilog
+*.svh linguist-language=SystemVerilog
+
+*.c linguist-detectable=false
+*.h linguist-detectable=false
