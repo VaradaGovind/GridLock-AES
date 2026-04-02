@@ -1,13 +1,15 @@
 #-----------------------------------
-# Verilog + Vivado (Safe Version)
-# Keeps Verilog source/testbench files
+# GridLock AES: Vivado + SystemVerilog (Safe Version)
+# Keeps RTL, Testbench, Constraints, and Project files
 #-----------------------------------
 
 # Ignore Vivado-generated folders
+.Xil/
 *.cache/
 *.hw/
 *.ip_user_files/
 *.runs/
+*.sim/
 *.data/
 *.xsa/
 *.dcp/
@@ -16,33 +18,42 @@
 *.backup.log
 *.backup.jou
 
-# Simulation outputs
+# Simulation and Synthesis outputs
 *.vcd
 *.wlf
 *.log
 *.jou
-transcript
 *.pb
 *.rpt
-*.tcl.history
-*.tclbackup
-work/
-obj_dir/
+*.saif
+*.wdb
+xsim.dir/
 
 # Temporary/editor files
 *~
 *.swp
 *.tmp
 *.bak
-*.DS_Store
+.DS_Store
+.DS_Store?
+.vscode/
+.idea/
 
-# -----------------------------
-# KEEP source and testbench files
-# -----------------------------
+#-----------------------------------
+# KEEP explicitly (Whitelist)
+#-----------------------------------
+
+# Hardware Source & Testbench files
 !*.v
 !*.vh
 !*.sv
 !*.svh
+
+# Vivado Constraints (Clock & Pin mapping)
+!*.xdc
+
+# Vivado Project File (Required to open the project)
+!*.xpr
 
 # Keep images and documentation
 !*.png
@@ -50,12 +61,6 @@ obj_dir/
 !*.jpeg
 !*.md
 
-# Keep project structure
+# Keep repository structure files
 !.gitignore
 !README.md
-
-# Keep .srcs and .sim folders but ignore their internal Vivado junk
-!*/.srcs/
-!*/.sim/
-!*/.srcs/**/
-!*/.sim/**/
